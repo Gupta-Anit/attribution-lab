@@ -12,4 +12,4 @@ jobs:
           python-version: "3.12"
       - run: pip install -r requirements.txt
       - run: pytest -q
-      - run: python generate_data.py --users 5000 --out data && python attribution.py --data data --db :memory:
+      - run: python generate_data.py --users 5000 --out data && python attribution.py --data data --db ci.duckdb
